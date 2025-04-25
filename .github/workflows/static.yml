@@ -4,6 +4,8 @@ name: Deploy static content to Pages
 on:
   push:
     branches: ["main"]
+    paths:
+      - 'public/**'  # Only trigger when something inside public/ changes
 
   workflow_dispatch:
 
