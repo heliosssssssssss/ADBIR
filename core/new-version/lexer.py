@@ -88,3 +88,9 @@ def tokenize(source_code: str) -> List[Token]:
     return tokens
 
 
+if __name__ == "__main__":
+    source_code = "hello world sigmas"
+    
+    tokens = tokenize(source_code)
+    for token in tokens:
+        print(token)

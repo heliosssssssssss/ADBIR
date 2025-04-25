@@ -35,3 +35,5 @@ class inputStream():
 test = inputStream("hello world\n sigmas")
 while not test.eol():
     print(f"CHAR: {test.move()} @ LINE : {test.Line}")
+
+    # taking shitr hold on.
