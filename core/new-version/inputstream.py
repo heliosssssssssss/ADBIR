@@ -36,4 +36,8 @@ test = inputStream("hello world\n sigmas")
 while not test.eol():
     print(f"CHAR: {test.move()} @ LINE : {test.Line}")
 
+<<<<<<< HEAD
 # commit fix 2
+=======
+    # taking shitr hold on. 1efvxv
+>>>>>>> 058a99c82f7fa0ac61c75dfd4f3ad853b43517cc
