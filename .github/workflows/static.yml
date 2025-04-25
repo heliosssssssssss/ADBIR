@@ -34,7 +34,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # 🔽 CHANGE THIS LINE to upload only the target subdirectory
           path: 'public/git-pages'
 
       - name: Deploy to GitHub Pages
