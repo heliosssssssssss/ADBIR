@@ -87,7 +87,7 @@ def tokenize(source_code: str) -> List[Token]:
 
     return tokens
 
-
+#testing tokenizer (it worked)
 if __name__ == "__main__":
     source_code = "hello world sigmas"
     
