@@ -1,1 +1,179 @@
-adbir future docs n home page here
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADBIR Documentation</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="assets/ADBIR.png">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h1>ADBIR</h1>
+                <p class="version">v1.0.0</p>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search documentation...">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#getting-started" class="nav-link">Getting Started</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#syntax" class="nav-link">Syntax</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#variables" class="nav-link">Variables</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#functions" class="nav-link">Functions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#control-flow" class="nav-link">Control Flow</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#types" class="nav-link">Types</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#standard-library" class="nav-link">Standard Library</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <section id="getting-started" class="doc-section">
+                <h2>Getting Started</h2>
+                <p>ADBIR is a modern programming language designed for simplicity and performance. This guide will help you get started with ADBIR.</p>
+                
+                <h3>Installation</h3>
+                <div class="code-block">
+                    <pre><code># Install ADBIR
+adbir install
+
+# Verify installation
+adbir --version</code></pre>
+                </div>
+
+                <h3>Your First Program</h3>
+                <div class="code-block">
+                    <pre><code>// hello.adbir
+fn main() {
+    print("Hello, ADBIR!");
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="syntax" class="doc-section">
+                <h2>Syntax</h2>
+                <p>ADBIR's syntax is clean and intuitive. Here are the basic syntax rules:</p>
+                
+                <h3>Comments</h3>
+                <div class="code-block">
+                    <pre><code>// Single line comment
+
+/*
+Multi-line
+comment
+*/</code></pre>
+                </div>
+
+                <h3>Basic Structure</h3>
+                <div class="code-block">
+                    <pre><code>// Every ADBIR program starts with a main function
+fn main() {
+    // Your code here
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="variables" class="doc-section">
+                <h2>Variables</h2>
+                <p>Variables in ADBIR are declared using the `let` keyword:</p>
+                
+                <div class="code-block">
+                    <pre><code>let x = 10;          // Integer
+let y = 3.14;        // Float
+let name = "ADBIR";  // String
+let is_valid = true; // Boolean</code></pre>
+                </div>
+            </section>
+
+            <section id="functions" class="doc-section">
+                <h2>Functions</h2>
+                <p>Functions are declared using the `fn` keyword:</p>
+                
+                <div class="code-block">
+                    <pre><code>// Function with parameters and return type
+fn add(a: int, b: int) -> int {
+    return a + b;
+}
+
+// Function without parameters
+fn greet() {
+    print("Hello!");
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="control-flow" class="doc-section">
+                <h2>Control Flow</h2>
+                <p>ADBIR supports standard control flow statements:</p>
+                
+                <div class="code-block">
+                    <pre><code>// If statement
+if x > 10 {
+    print("x is greater than 10");
+} else {
+    print("x is less than or equal to 10");
+}
+
+// For loop
+for i in 0..10 {
+    print(i);
+}
+
+// While loop
+while x > 0 {
+    x = x - 1;
+}</code></pre>
+                </div>
+            </section>
+
+            <section id="types" class="doc-section">
+                <h2>Types</h2>
+                <p>ADBIR has several built-in types:</p>
+                
+                <div class="code-block">
+                    <pre><code>int     // Integer numbers
+float   // Floating point numbers
+string  // Text
+bool    // Boolean (true/false)
+array   // Collection of values
+map     // Key-value pairs</code></pre>
+                </div>
+            </section>
+
+            <section id="standard-library" class="doc-section">
+                <h2>Standard Library</h2>
+                <p>The ADBIR standard library provides useful functions:</p>
+                
+                <div class="code-block">
+                    <pre><code>// String operations
+let s = "Hello";
+print(s.length());    // 5
+print(s.upper());     // "HELLO"
+
+// Array operations
+let arr = [1, 2, 3];
+print(arr.length());  // 3
+print(arr.push(4));   // [1, 2, 3, 4]</code></pre>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

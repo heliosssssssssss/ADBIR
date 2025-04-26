@@ -2,12 +2,12 @@
 ### SO FOR EXAMPLE: adbir.exe file_name.adbir
 
 import argparse
+from utility.debug_manager import debug
 
 class Runtime:
     def __init__(self):
 
         # global enviroment rules 
-        self.DEBUG_MODE = False
 
         parser = argparse.ArgumentParser()
         parser.add_argument('file_path', type = str, help = "path to file")
@@ -16,7 +16,10 @@ class Runtime:
         args = parser.parse_args()
 
         if args.debug:
-            self.DEBUG_MODE = True
+            pass #temp
+
+        file = open(args.file_path) 
+        print(file.read())
 
 if __name__ == "__main__":
     Runtime()

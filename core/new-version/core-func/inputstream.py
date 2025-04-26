@@ -1,3 +1,5 @@
+from utility.debug_manager import debug 
+
 class inputStream(): 
         
     def __init__(self, _input):
