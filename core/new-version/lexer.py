@@ -9,6 +9,7 @@ class TokenType(Enum):
     Equals = 4
     OpenParen = 5
     CloseParen = 6
+    EOF = 7
 
 KEYWORDS: Dict[str, TokenType] = {
     "let": TokenType.Let,
@@ -84,7 +85,7 @@ def tokenize(source_code: str) -> List[Token]:
                     src[0]
                 )
                 exit(1)
-
+    tokens.append({ "type": TokenType.EOF, "value": "EndOfFile" })
     return tokens
 
 #testing tokenizer (it worked)
