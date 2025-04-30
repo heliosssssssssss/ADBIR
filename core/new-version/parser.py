@@ -8,6 +8,9 @@ class Parser:
     def not_eof(self)-> bool:
         return self.tokens[0]["type"] != TokenType.EOF
 
+    def _at(self)-> "Token":
+        return self.tokens[0]
+    
     def produceAST(self,sourceCode: str)-> Program:
         self.tokens = tokenize(sourceCode)
         program: Program = {
@@ -23,5 +26,21 @@ class Parser:
     def _parse_stmt(self) -> "Stmt":
         return self._parse_expr()
     
+
+    def _parse_expr(self)-> "Expr":
+        return self._parse_primary_expr()
+
+    def _parse_primary_expr(self)-> "Expr":
+        tk = self._at().type
+
+        if tk == TokenType.Identifier:
+            return{
+                "kind": "Identifier",
+                "symbol": self._at().value
+            }
+        else:
+            return{}
+
+
 
     
