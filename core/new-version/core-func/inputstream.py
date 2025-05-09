@@ -34,6 +34,6 @@ class inputStream():
         raise Exception(f"{msg} ({self.Line}:{self.Column})")
 
 
-test = inputStream("hello world\n sigmas")
+test = inputStream("hello world\n this is line 2 \n this is line 3 but also the EOF end of file")
 while not test.eol():
     print(f"CHAR: {test.move()} @ LINE : {test.Line}")
